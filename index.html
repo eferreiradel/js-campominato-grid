@@ -17,17 +17,19 @@
     <!-- ....Js script.... -->
     <script src="index.js" defer async></script>
   </head>
-  <body class="d-flex vh-100 align-items-center">
-    <div class="container-fluid">
+  <body class="vh-100 align-items-center">
+    <div class="navbar bg-light shadow-sm px-3">
+      Grid Generator
+      <button class="btn rounded btn-light border" id="btnGridGenerator">
+        GENERA GRIGLIA
+      </button>
+    </div>
+    <div class="container-fluid my-5">
       <div class="row justify-content-center">
-        <div class="col-8">
-          <div class="container-fluid d-flex justify-content-center">
-            <button class="btn btn-dark" id="btnGridGenerator">
-              GENERA GRIGLIA
-            </button>
-          </div>
+        <div class="col-11 col-md-5 col-lg-4">
+          <div class="container-fluid d-flex justify-content-center"></div>
           <div
-            class="container-fluid py-4 d-flex justify-content-center"
+            class="container-fluid pt-3 d-flex justify-content-center p-0"
             id="gridContainer"
           ></div>
         </div>
