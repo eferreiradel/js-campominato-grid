@@ -18,16 +18,14 @@ let gridContainer = document.querySelector("#gridContainer");
 
 btnGridGenerator.addEventListener("click", generateGridTiem);
 
-function generateGridTiem() {
+generateGridTiem(25);
+
+function generateGridTiem(cells) {
   //craezione della cella
-  let gridItem = document.createElement("div");
-  gridItem.classList.add("card");
 
-  let gridList = [];
-
-  for (counter = 0; counter <= 2; counter++) {
-    gridList.push(gridItem);
-    console.log(gridList);
+  for (counter = 0; counter <= cells; counter++) {
+    let gridItem = document.createElement("div");
+    gridItem.classList.add("card");
     gridContainer.appendChild(gridItem);
   }
 
