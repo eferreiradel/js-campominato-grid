@@ -23,7 +23,8 @@ body {
   justify-content: center;
 }
 .card--active {
-  background-color: blue;
+  color: white;
+  background-color: rgb(85, 85, 248);
 }
 .card--disactive {
   background-color: darkred;

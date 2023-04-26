@@ -15,19 +15,31 @@ console.log("run -- OK");
 //bottoni
 let btnGridGenerator = document.querySelector("#btnGridGenerator");
 let gridContainer = document.querySelector("#gridContainer");
-
-btnGridGenerator.addEventListener("click", generateGridTiem);
-
 generateGridTiem(25);
 
 function generateGridTiem(cells) {
   //craezione della cella
 
   for (counter = 0; counter <= cells; counter++) {
-    let gridItem = document.createElement("div");
-    gridItem.classList.add("card");
+    let gridItem = document.createElement("button");
+    gridItem.classList.add("card", "btn");
+    gridItem.innerHTML = generateRandomInt();
     gridContainer.appendChild(gridItem);
   }
+}
+let gridSelected = document.querySelectorAll(".card");
+gridSelected.forEach((card) => {
+  card.addEventListener("click", () => {
+    card.classList.add("card--active");
+    console.log("carta attiva");
+  });
+});
 
-  //moltiplicazione delle celle secondo i parametri
+function addClassActive() {
+  gridSelected.classList.add("card--active");
+}
+
+function generateRandomInt() {
+  let randomInt = Math.floor(Math.random() * 101);
+  return randomInt;
 }
