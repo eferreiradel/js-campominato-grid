@@ -1,0 +1,21 @@
+body {
+  background-color: darkcyan;
+}
+
+* {
+  border: 1px solid black;
+  box-sizing: border-box;
+}
+.card {
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 25px;
+  background-color: aliceblue;
+  height: 25px;
+  margin: 3px;
+}
+.card--active {
+  background-color: blue;
+}
+.card--disactive {
+  background-color: darkred;
+}
