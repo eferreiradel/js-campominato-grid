@@ -3,16 +3,24 @@ body {
 }
 
 * {
-  border: 1px solid black; */
+  /* border: 1px solid black; */
   box-sizing: border-box;
+  overflow: hidden;
 }
 
 #gridContainer {
   flex-wrap: wrap;
 }
 
+.navBar--height {
+  height: 4em;
+}
+.main--height {
+  height: calc(100vh - 4em);
+}
+
 .card {
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid (0, 0, 0);
   background-color: aliceblue;
   height: 20px;
   width: calc(100% / 10);

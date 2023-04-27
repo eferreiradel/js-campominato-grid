@@ -1,33 +1,23 @@
 console.log("run -- OK");
 let gridContainer = document.querySelector("#gridContainer");
-
-//bottoni
 let btnGridGenerator = document.querySelector("#btnGridGenerator");
-let btnResetGrid = btnGridGenerator.value;
+let btnSetGrid = document.querySelector("#btnSetGrid");
 
 //eventi
-
-let celleDaAggiungere = setDifficult();
-generateGrid(celleDaAggiungere);
-
-btnGridGenerator.addEventListener("click", setDifficult);
-function setDifficult() {
+btnSetGrid.addEventListener("click", setGrid);
+function setGrid() {
   let difficoltà;
   if (btnGridGenerator.value === "easy") {
     difficoltà = 99;
   } else if (btnGridGenerator.value === "medium") {
-    difficoltà = 49;
+    difficoltà = 59;
   } else if (btnGridGenerator.value === "hard") {
-    difficoltà = 34;
+    difficoltà = 39;
   }
 
-  console.log(btnGridGenerator.value);
   console.log(difficoltà);
-  return difficoltà;
-}
 
-function generateGrid(celle) {
-  for (counter = 0; counter <= celle; counter++) {
+  for (counter = 0; counter <= difficoltà; counter++) {
     let gridItem = document.createElement("button");
     gridItem.classList.add("card", "btn");
     gridItem.innerHTML = generateRandomInt();
