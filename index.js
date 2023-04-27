@@ -1,24 +1,31 @@
 console.log("run -- OK");
-
-let btnGridGenerator = document.querySelector("#btnGridGenerator");
 let gridContainer = document.querySelector("#gridContainer");
 
-let celleDagenerare = setDifficult();
-generateGrid(celleDagenerare);
+//bottoni
+let btnGridGenerator = document.querySelector("#btnGridGenerator");
+let btnResetGrid = btnGridGenerator.value;
+
+//eventi
+
+let celleDaAggiungere = setDifficult();
+generateGrid(celleDaAggiungere);
 
 btnGridGenerator.addEventListener("click", setDifficult);
 function setDifficult() {
   let difficoltà;
   if (btnGridGenerator.value === "easy") {
-    difficoltà = 100;
+    difficoltà = 99;
   } else if (btnGridGenerator.value === "medium") {
-    difficoltà = 50;
+    difficoltà = 49;
   } else if (btnGridGenerator.value === "hard") {
-    difficoltà = 35;
+    difficoltà = 34;
   }
+
+  console.log(btnGridGenerator.value);
   console.log(difficoltà);
   return difficoltà;
 }
+
 function generateGrid(celle) {
   for (counter = 0; counter <= celle; counter++) {
     let gridItem = document.createElement("button");
@@ -32,7 +39,6 @@ let gridSelected = document.querySelectorAll(".card");
 gridSelected.forEach((card) => {
   card.addEventListener("click", () => {
     card.classList.add("card--active");
-    console.log("carta attiva");
   });
 });
 

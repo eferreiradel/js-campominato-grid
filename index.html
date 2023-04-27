@@ -21,25 +21,28 @@
   <!--...................................................-->
 
   <body class="vh-100 align-items-center">
-    <div class="navbar bg-light shadow-sm px-3">
-      Grid Generator
-      <select class="btn rounded btn-light border" id="btnGridGenerator">
-        <option value="#" selected disabled>Livello di difficoltà</option>
-        <option value="easy">Easy</option>
-        <option value="medium">Medium</option>
-        <option value="hard">Hard</option>
-      </select>
-    </div>
-    <div class="container-fluid my-5">
-      <div class="row justify-content-center">
-        <div class="col-11 col-md-5 col-lg-4">
-          <div class="container-fluid d-flex justify-content-center"></div>
-          <div
-            class="container-fluid pt-3 d-flex justify-content-center p-0"
-            id="gridContainer"
-          ></div>
+    <header>
+      <div class="navbar bg-light shadow-sm px-3">
+        <span>Grid Generator</span>
+        <div class="nav gap-3">
+          <button class="btn btn-dark rounded" id="btnResetGrid">Reset</button>
+          <select class="btn rounded btn-light border" id="btnGridGenerator">
+            <option value="#" selected disabled>Livello di difficoltà</option>
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+          </select>
         </div>
       </div>
-    </div>
+    </header>
+    <main>
+      <div class="container-fluid my-5 p-0 bg-primary">
+        <div class="row justify-content-center p-0">
+          <div class="col-11 col-md-5 col-lg-4 p-0">
+            <div class="d-flex justify-content-center" id="gridContainer"></div>
+          </div>
+        </div>
+      </div>
+    </main>
   </body>
 </html>

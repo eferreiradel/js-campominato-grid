@@ -3,7 +3,7 @@ body {
 }
 
 * {
-  /* border: 1px solid black; */
+  border: 1px solid black; */
   box-sizing: border-box;
 }
 
@@ -17,7 +17,7 @@ body {
   height: 20px;
   width: calc(100% / 10);
   display: flex;
-  padding: 1em;
+  padding: 15px;
   align-items: center;
   justify-content: center;
 }
