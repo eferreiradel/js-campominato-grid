@@ -34,15 +34,13 @@ function setGrid(value) {
   let textHeader = document.querySelector("#textHeader");
   textHeader.classList.add("hide");
 
-  return difficoltà;
-}
-
-let gridSelected = document.querySelectorAll(".card");
-gridSelected.forEach((card) => {
-  card.addEventListener("click", () => {
-    card.classList.add("card--active");
+  let gridSelected = document.querySelectorAll(".card");
+  gridSelected.forEach((card) => {
+    card.addEventListener("click", () => {
+      card.classList.add("card--active");
+    });
   });
-});
+}
 
 function addClassActive() {
   gridSelected.classList.add("card--active");
