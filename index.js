@@ -2,20 +2,24 @@ console.log("run -- OK");
 let gridContainer = document.querySelector("#gridContainer");
 let btnGridGenerator = document.querySelector("#btnGridGenerator");
 let btnSetGrid = document.querySelector("#btnSetGrid");
+let btnResetGrid = document.querySelector("#btnResetGrid");
 
 //eventi
+btnResetGrid.addEventListener("click", resetGrid);
+function resetGrid() {
+  window.location.reload(true);
+}
+
 btnSetGrid.addEventListener("click", setGrid);
-function setGrid() {
-  let difficoltà;
-  if (btnGridGenerator.value === "easy") {
+function setGrid(value) {
+  value = btnGridGenerator.value;
+  if (value === "easy") {
     difficoltà = 99;
-  } else if (btnGridGenerator.value === "medium") {
+  } else if (value === "medium") {
     difficoltà = 59;
-  } else if (btnGridGenerator.value === "hard") {
+  } else if (value === "hard") {
     difficoltà = 39;
   }
-
-  console.log(difficoltà);
 
   for (counter = 0; counter <= difficoltà; counter++) {
     let gridItem = document.createElement("button");
@@ -23,6 +27,14 @@ function setGrid() {
     gridItem.innerHTML = generateRandomInt();
     gridContainer.appendChild(gridItem);
   }
+
+  btnSetGrid.classList.add("hide");
+  btnGridGenerator.classList.add("hide");
+
+  let textHeader = document.querySelector("#textHeader");
+  textHeader.classList.add("hide");
+
+  return difficoltà;
 }
 
 let gridSelected = document.querySelectorAll(".card");
